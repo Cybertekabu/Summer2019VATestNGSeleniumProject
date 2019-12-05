@@ -5,6 +5,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 public class ExtentDemoTest {
 
@@ -38,6 +39,13 @@ public class ExtentDemoTest {
         report.setSystemInfo("Environment", "QA");
         report.setSystemInfo("browser", "chrome");
         report.setSystemInfo("whats my name", "John B Goodenough");
+
+    }
+    @Test
+    public void test1(){
+
+        extentLogger = report.createTest("TC001 Login as driver test");
+
 
     }
 
